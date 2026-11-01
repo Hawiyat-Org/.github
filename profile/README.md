@@ -2,27 +2,27 @@
 
 The AI execution layer, built in Algeria. One API key for GPT, Claude, Gemini and open models, billed in DZD.
 
-[Website](https://www.hawiyat.org) · [Blog](https://www.hawiyat.org/blog) · [Pricing](https://www.hawiyat.org/pricing) · [API](https://www.hawiyat.org/api)
+[Website](https://hawiyat.org) · [Blog](https://hawiyat.org/blog) · [Pricing](https://hawiyat.org/pricing) · [API](https://hawiyat.org/api)
 
 ## Products
 
 | Product | What it does | Links |
 |---|---|---|
-| **Hawiyat AI Composer** | Stateful execution layer. It picks the model per task, connects your systems, and checks the result before it ships. | [Plans](https://www.hawiyat.org/composer) · [Pricing](https://www.hawiyat.org/pricing) |
-| **Hawiyat API** | One OpenAI-compatible key for GPT, Claude, Gemini and open models. DZD billing, CCP and Baridi Mob, no foreign card. | [API](https://www.hawiyat.org/api) · [AI API in Algeria](https://www.hawiyat.org/ai-api-algeria) |
-| **Managed automation** | n8n hosting, WhatsApp Business API on Evolution API, and application hosting. Activated in 24 hours. | [Services](https://www.hawiyat.org/services) |
-| **Enterprise** | Dedicated capacity, custom infrastructure, named account manager, AR/FR/EN support. | [Pricing](https://www.hawiyat.org/pricing) |
+| **Hawiyat AI Composer** | Stateful execution layer. It picks the model per task, connects your systems, and checks the result before it ships. | [Plans](https://hawiyat.org/composer) · [Pricing](https://hawiyat.org/pricing) |
+| **Hawiyat API** | One OpenAI-compatible key for GPT, Claude, Gemini and open models. DZD billing, CCP and Baridi Mob, no foreign card. | [API](https://hawiyat.org/api) · [AI API in Algeria](https://hawiyat.org/ai-api-algeria) |
+| **Managed automation** | n8n hosting, WhatsApp Business API on Evolution API, and application hosting. Activated in 24 hours. | [Services](https://hawiyat.org/services) |
+| **Enterprise** | Dedicated capacity, custom infrastructure, named account manager, AR/FR/EN support. | [Pricing](https://hawiyat.org/pricing) |
 
 ## From the blog
 
-- [GLM-5.3-Flash Uncensored: How Abliteration Removes Refusal From an Open Model](https://www.hawiyat.org/blog/glm-5-3-flash-uncensored-abliteration) · 2026-10-15
-- [AI API in Algeria (2026): Hawiyat vs DZRouter vs OpenDunes](https://www.hawiyat.org/blog/best-ai-provider-algeria-comparison) · 2026-10-15
-- [We Audited the Same Codebase with Hawiyat Composer and Claude Opus 4.8](https://www.hawiyat.org/blog/hawiyat-composer-vs-claude-opus-benchmark) · 2026-08-17
-- [What Is Hawiyat Composer?](https://www.hawiyat.org/blog/what-is-hawiyat-composer) · 2026-08-17
-- [n8n Hosting in Algeria: DZD Pricing, Setup, and What You Get](https://www.hawiyat.org/blog/n8n-hosting-algeria-guide) · 2026-08-17
-- [WhatsApp Business API in Algeria: A Practical Guide with Evolution API](https://www.hawiyat.org/blog/whatsapp-business-api-algeria) · 2026-08-17
+- [GLM-5.3-Flash Uncensored: How Abliteration Removes Refusal From an Open Model](https://hawiyat.org/blog/glm-5-3-flash-uncensored-abliteration) · 2026-10-15
+- [AI API in Algeria (2026): Hawiyat vs DZRouter vs OpenDunes](https://hawiyat.org/blog/best-ai-provider-algeria-comparison) · 2026-10-15
+- [We Audited the Same Codebase with Hawiyat Composer and Claude Opus 4.8](https://hawiyat.org/blog/hawiyat-composer-vs-claude-opus-benchmark) · 2026-08-17
+- [What Is Hawiyat Composer?](https://hawiyat.org/blog/what-is-hawiyat-composer) · 2026-08-17
+- [n8n Hosting in Algeria: DZD Pricing, Setup, and What You Get](https://hawiyat.org/blog/n8n-hosting-algeria-guide) · 2026-08-17
+- [WhatsApp Business API in Algeria: A Practical Guide with Evolution API](https://hawiyat.org/blog/whatsapp-business-api-algeria) · 2026-08-17
 
-[All posts](https://www.hawiyat.org/blog) · [RSS](https://www.hawiyat.org/feed.xml)
+[All posts](https://hawiyat.org/blog) · [RSS](https://hawiyat.org/feed.xml)
 
 ## How we work
 
