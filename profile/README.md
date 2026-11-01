@@ -1,19 +1,28 @@
 # Hawiyat
 
-We build the Hawiyat AI platform: an AI gateway, an application platform, and the services that run on them.
+The AI execution layer, built in Algeria. One API key for GPT, Claude, Gemini and open models, billed in DZD.
 
-## What we run
+[Website](https://www.hawiyat.org) · [Blog](https://www.hawiyat.org/blog) · [Pricing](https://www.hawiyat.org/pricing) · [API](https://www.hawiyat.org/api)
 
-| Area | Topic filter |
-|---|---|
-| Application platform | [topic:platform](https://github.com/orgs/Hawiyat-Org/repositories?q=topic%3Aplatform) |
-| AI gateway | [topic:ai-gateway](https://github.com/orgs/Hawiyat-Org/repositories?q=topic%3Aai-gateway) |
-| Customer applications | [topic:sales](https://github.com/orgs/Hawiyat-Org/repositories?q=topic%3Asales) |
-| Observability | [topic:observability](https://github.com/orgs/Hawiyat-Org/repositories?q=topic%3Aobservability) |
-| Infrastructure | [topic:infrastructure](https://github.com/orgs/Hawiyat-Org/repositories?q=topic%3Ainfrastructure) |
-| Tools and skills | [topic:hawiyat](https://github.com/orgs/Hawiyat-Org/repositories?q=topic%3Ahawiyat) |
+## Products
 
-Repository names change. The topics are stable. Pinned repositories on the org page are the current core set.
+| Product | What it does | Links |
+|---|---|---|
+| **Hawiyat AI Composer** | Stateful execution layer. It picks the model per task, connects your systems, and checks the result before it ships. | [Plans](https://www.hawiyat.org/composer) · [Pricing](https://www.hawiyat.org/pricing) |
+| **Hawiyat API** | One OpenAI-compatible key for GPT, Claude, Gemini and open models. DZD billing, CCP and Baridi Mob, no foreign card. | [API](https://www.hawiyat.org/api) · [AI API in Algeria](https://www.hawiyat.org/ai-api-algeria) |
+| **Managed automation** | n8n hosting, WhatsApp Business API on Evolution API, and application hosting. Activated in 24 hours. | [Services](https://www.hawiyat.org/services) |
+| **Enterprise** | Dedicated capacity, custom infrastructure, named account manager, AR/FR/EN support. | [Pricing](https://www.hawiyat.org/pricing) |
+
+## From the blog
+
+- [GLM-5.3-Flash Uncensored: How Abliteration Removes Refusal From an Open Model](https://www.hawiyat.org/blog/glm-5-3-flash-uncensored-abliteration) · 2026-10-15
+- [AI API in Algeria (2026): Hawiyat vs DZRouter vs OpenDunes](https://www.hawiyat.org/blog/best-ai-provider-algeria-comparison) · 2026-10-15
+- [We Audited the Same Codebase with Hawiyat Composer and Claude Opus 4.8](https://www.hawiyat.org/blog/hawiyat-composer-vs-claude-opus-benchmark) · 2026-08-17
+- [What Is Hawiyat Composer?](https://www.hawiyat.org/blog/what-is-hawiyat-composer) · 2026-08-17
+- [n8n Hosting in Algeria: DZD Pricing, Setup, and What You Get](https://www.hawiyat.org/blog/n8n-hosting-algeria-guide) · 2026-08-17
+- [WhatsApp Business API in Algeria: A Practical Guide with Evolution API](https://www.hawiyat.org/blog/whatsapp-business-api-algeria) · 2026-08-17
+
+[All posts](https://www.hawiyat.org/blog) · [RSS](https://www.hawiyat.org/feed.xml)
 
 ## How we work
 
@@ -23,20 +32,50 @@ Repository names change. The topics are stable. Pinned repositories on the org p
 - Secrets never enter git. Use the environment or the secrets manager.
 - A service ships with a Dockerfile, a health endpoint, tests and a runbook link.
 
-## Start here
+## Default configs
 
-- [Security policy](https://github.com/Hawiyat-Org/.github/blob/main/SECURITY.md)
-- [Contributing](https://github.com/Hawiyat-Org/.github/blob/main/CONTRIBUTING.md)
-- [Code of conduct](https://github.com/Hawiyat-Org/.github/blob/main/CODE_OF_CONDUCT.md)
+Copy these into a repository. GitHub does not inherit them from here.
 
-Reusable pipelines live in `.github/workflows/` of this repository. Call one from a repo:
+**Dependabot.** Weekly updates for npm, pip, Docker and GitHub Actions, grouped by ecosystem, with SHA-pinned actions.
+
+```bash
+mkdir -p .github
+curl -fsSL https://raw.githubusercontent.com/Hawiyat-Org/.github/main/.github/dependabot.yml \
+  -o .github/dependabot.yml
+```
+
+[View dependabot.yml](https://github.com/Hawiyat-Org/.github/blob/main/.github/dependabot.yml) · [Raw](https://raw.githubusercontent.com/Hawiyat-Org/.github/main/.github/dependabot.yml)
+
+**Reusable pipelines.** Call them instead of copying YAML.
 
 ```yaml
 jobs:
   ci:
     uses: Hawiyat-Org/.github/.github/workflows/node-ci.yml@main
+    with:
+      coverage-threshold: 60
+
+  image:
+    uses: Hawiyat-Org/.github/.github/workflows/docker-build.yml@main
+    with:
+      image-name: hawiyat-org/example
+      push: true
+
+  secrets:
+    uses: Hawiyat-Org/.github/.github/workflows/secret-scan.yml@main
 ```
+
+[node-ci](https://github.com/Hawiyat-Org/.github/blob/main/.github/workflows/node-ci.yml) ·
+[docker-build](https://github.com/Hawiyat-Org/.github/blob/main/.github/workflows/docker-build.yml) ·
+[secret-scan](https://github.com/Hawiyat-Org/.github/blob/main/.github/workflows/secret-scan.yml)
+
+**Policy.** Inherited by every repository without a local copy.
+
+[Security](https://github.com/Hawiyat-Org/.github/blob/main/SECURITY.md) ·
+[Contributing](https://github.com/Hawiyat-Org/.github/blob/main/CONTRIBUTING.md) ·
+[Code of conduct](https://github.com/Hawiyat-Org/.github/blob/main/CODE_OF_CONDUCT.md)
 
 ## Contact
 
 security@hawiyat.org for vulnerabilities. contact@hawiyat.org for everything else.
+WhatsApp: [+213 559 555 951](https://wa.me/213559555951). Arabic, French, English.
