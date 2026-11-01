@@ -77,5 +77,4 @@ jobs:
 
 ## Contact
 
-security@hawiyat.org for vulnerabilities. contact@hawiyat.org for everything else.
-WhatsApp: [+213 559 555 951](https://wa.me/213559555951). Arabic, French, English.
+security@hawiyat.org for vulnerabilities. contact@hawiyat.org.
