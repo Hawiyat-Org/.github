@@ -25,9 +25,9 @@ Repository names change. The topics are stable. Pinned repositories on the org p
 
 ## Start here
 
-- [Security policy](./SECURITY.md)
-- [Contributing](./CONTRIBUTING.md)
-- [Code of conduct](./CODE_OF_CONDUCT.md)
+- [Security policy](https://github.com/Hawiyat-Org/.github/blob/main/SECURITY.md)
+- [Contributing](https://github.com/Hawiyat-Org/.github/blob/main/CONTRIBUTING.md)
+- [Code of conduct](https://github.com/Hawiyat-Org/.github/blob/main/CODE_OF_CONDUCT.md)
 
 Reusable pipelines live in `.github/workflows/` of this repository. Call one from a repo:
 
