@@ -36,7 +36,7 @@ The AI execution layer, built in Algeria. One API key for GPT, Claude, Gemini an
 
 Copy these into a repository. GitHub does not inherit them from here.
 
-**Dependabot.** Weekly updates for npm, pip, Docker and GitHub Actions, grouped by ecosystem, with SHA-pinned actions.
+**Dependabot.** Weekly updates for npm, pip, Docker and GitHub Actions, grouped by ecosystem. It also keeps SHA-pinned actions current.
 
 ```bash
 mkdir -p .github
