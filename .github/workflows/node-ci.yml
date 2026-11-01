@@ -1,0 +1,77 @@
+name: node-ci
+
+# Reusable Node pipeline. Call it from any repo:
+#
+#   jobs:
+#     ci:
+#       uses: Hawiyat-Org/.github/.github/workflows/node-ci.yml@main
+#       with:
+#         coverage: 60
+#
+# Pin action refs to commit SHAs before production use. See APPLY.md step 4.
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        type: string
+        default: "24"
+      package-manager:
+        type: string
+        default: pnpm
+      coverage-threshold:
+        type: number
+        default: 0
+      run-build:
+        type: boolean
+        default: true
+      working-directory:
+        type: string
+        default: "."
+
+permissions:
+  contents: read
+
+concurrency:
+  group: node-ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: ${{ inputs.working-directory }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: pnpm/action-setup@ea17c68df8912ef543352723c149a84f56e3d413 # v6.1.0
+        if: inputs.package-manager == 'pnpm'
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: ${{ inputs.node-version }}
+          cache: ${{ inputs.package-manager }}
+
+      - name: Install
+        run: ${{ inputs.package-manager }} install --frozen-lockfile
+
+      - name: Lint
+        run: ${{ inputs.package-manager }} exec biome ci
+
+      - name: Typecheck
+        run: ${{ inputs.package-manager }} exec tsc --noEmit
+
+      - name: Test
+        run: |
+          if [ "${{ inputs.coverage-threshold }}" = "0" ]; then
+            ${{ inputs.package-manager }} exec vitest run --reporter=dot
+          else
+            ${{ inputs.package-manager }} exec vitest run --reporter=dot \
+              --coverage --coverage.thresholds.lines=${{ inputs.coverage-threshold }}
+          fi
+
+      - name: Build
+        if: inputs.run-build
+        run: ${{ inputs.package-manager }} build

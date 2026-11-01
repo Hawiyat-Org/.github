@@ -1,0 +1,60 @@
+version: 2
+
+# Inherited by every repository that has no dependabot.yml of its own.
+# Grouping keeps review load low. Patch and minor updates are safe to auto-merge
+# once CI is green (set that in the ruleset, not here).
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Africa/Algiers
+    open-pull-requests-limit: 5
+    groups:
+      actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: chore
+      include: scope
+    labels: [dependencies, ci]
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "06:00"
+      timezone: Africa/Algiers
+    open-pull-requests-limit: 10
+    versioning-strategy: increase
+    groups:
+      patch-and-minor:
+        update-types: [minor, patch]
+      major:
+        update-types: [major]
+    commit-message:
+      prefix: chore
+      include: scope
+    labels: [dependencies]
+
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    groups:
+      python:
+        patterns: ["*"]
+    labels: [dependencies]
+
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    labels: [dependencies, containers]
